@@ -1,0 +1,2 @@
+cd /home/mrvenkat/protfolio1
+python3 -m http.server 3000

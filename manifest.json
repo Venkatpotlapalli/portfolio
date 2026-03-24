@@ -1,0 +1,21 @@
+{
+  "name": "P N V Hari Surya Prakash Reddy | Portfolio",
+  "short_name": "Hari Portfolio",
+  "description": "Portfolio of P N V Hari Surya Prakash Reddy - Cloud & DevOps",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFE3",
+  "theme_color": "#FFFFE3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "personal", "developer"],
+  "lang": "en",
+  "dir": "ltr"
+}

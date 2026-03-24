@@ -1,0 +1,187 @@
+/* ===== BASE STYLES ===== */
+/* Author: P N V Hari Surya Prakash Reddy */
+/* CSS Variables */
+:root {
+    --bg-primary: #013A63;
+    --bg-secondary: #01497C;
+    --bg-tertiary: #014F86;
+
+    --accent-primary: #2C7DA0;
+    --accent-secondary: #468FAF;
+    --accent-rgb: 44, 125, 160;
+
+    --hypertext-color: #2C7DA0;
+    --accent-tertiary: #2A6F97;
+
+    --text-primary: #EAF6FB;
+    --text-secondary: #CFEAF5;
+    --text-dim: #89C2D9;
+
+    --hover-color: #61A5C2;
+    --hover-rgb: 97, 165, 194;
+
+    --button-text: #013A63;
+
+    --glow: rgba(44, 125, 160, 0.25);
+    --shadow: rgba(1, 58, 99, 0.45);
+
+    --gradient: linear-gradient(135deg, #2C7DA0 0%, #61A5C2 100%);
+
+    --card-bg: rgba(1, 73, 124, 0.85);
+    --card-border: rgba(137, 194, 217, 0.25);
+    --card-shadow: rgba(1, 58, 99, 0.35);
+
+    --nav-bg: rgba(1, 58, 99, 0.92);
+    --nav-border: rgba(137, 194, 217, 0.18);
+
+    --blob-secondary: rgba(44, 125, 160, 0.6);
+
+    --border-width: 1px;
+}
+/* Light Mode */
+.light-mode {
+    --bg-primary: #CAD2C5;
+    --bg-secondary: #84A98C;
+    --bg-tertiary: #84A98C;
+
+    --accent-primary: #52796F;
+    --accent-secondary: #52796F;
+    --accent-rgb: 82, 121, 111;
+
+    --hypertext-color: #52796F;
+    --accent-tertiary: #84A98C;
+
+    --text-primary: #2F3E46;
+    --text-secondary: #354F52;
+    --text-dim: #52796F;
+
+    --hover-color: #354F52;
+    --hover-rgb: 53, 79, 82;
+
+    --button-text: #CAD2C5;
+
+    --glow: rgba(82, 121, 111, 0.22);
+    --shadow: rgba(47, 62, 70, 0.18);
+
+    --card-bg: rgba(202, 210, 197, 0.88);
+    --card-border: rgba(47, 62, 70, 0.12);
+    --card-shadow: rgba(47, 62, 70, 0.16);
+
+    --gradient: linear-gradient(135deg, #52796F 0%, #354F52 100%);
+
+    --nav-bg: rgba(202, 210, 197, 0.94);
+    --nav-border: rgba(47, 62, 70, 0.12);
+
+    --blob-secondary: rgba(132, 169, 140, 0.64);
+
+    --border-width: 1px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    cursor: auto;
+    line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 4px;
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Scroll reveal animation */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.section-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--text-primary);
+    position: relative;
+    letter-spacing: -1px;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--hypertext-color);
+    border-radius: 2px;
+}
+
+/* Glass Card */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--border-width) solid var(--card-border);
+    box-shadow: 0 8px 32px 0 var(--card-shadow);
+}
+
+/* Accessibility */
+.skip-nav {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: var(--bg-primary);
+    padding: 1rem 2rem;
+    border-radius: 0 0 12px 12px;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 100000;
+    transition: top 0.3s ease;
+    box-shadow: 0 4px 20px var(--glow);
+}
+
+.skip-nav:focus {
+    top: 0;
+    outline: none;
+}
